@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+  <h1 class="title">가위 바위 보</h1>
+  <div id="scoreBoard">
+    <span>
+      <img id="playerImg"/>
+      <p>플레이어</p>
+      <p id="playerScore">0</p>
+    </span>
+    <span>
+      <img id="computerImg"/>
+      <p>컴퓨터</p>
+      <p id="computerScore">0</p>
+    </span>
+  </div>
+  <div>
+    <p class="semiTitle">선택하기</p>
+    <div>남은 횟수: <span id="restCount">10</span></div>
+  </div>
+  <div id="buttonList">
+    <button id="scissors">가위</button>
+    <button id="rock">바위</button>
+    <button id="paper">보</button>
+  </div>
+  <div id="result" style="font-size: 40px; font-weight: 600;"></div>
+  <script src="script.js"></script>
+</body>
+</html>
