@@ -8,6 +8,7 @@ const quizzes = [
 ];
 
 let quizIdx = -1;
+let clickFlag = 0;
 
 const body = document.querySelector('body');
 const quizTitle = document.querySelector('#quizTitle');
@@ -28,3 +29,23 @@ window.onload = function() {
     answerList.appendChild(span);
   })
 }
+
+answerList.addEventListener('click', e => {
+  if( e.target.tagName === "DIV") return;
+  if( clickFlag === -1) return;
+  clickFlag = clickFlag - 1;
+
+  e.target.parentNode.childNodes.forEach(span => {
+    if( span.innerText === quizzes[quizIdx].answer) span.style.background = "green";
+    else span.style.background = "red";
+  })
+
+  if( e.target.innerText === quizzes[quizIdx].answer){
+    button.innerText = "next";
+    body.style.background = "green";
+  } else {
+    button.innerText = "restart"
+    body.style.background = "red";
+  }
+  button.style.display = 'block';
+})
