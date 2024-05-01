@@ -49,3 +49,26 @@ answerList.addEventListener('click', e => {
   }
   button.style.display = 'block';
 })
+
+button.addEventListener('click', () => {
+  let tmp;
+  do {
+    tmp = Math.floor(Math.random() * quizzes.length);
+  } while(tmp === quizIdx)
+  quizIdx = tmp;
+  
+  clickFlag = clickFlag + 1;
+
+  body.style.backgroundColor = "gray";
+  quizTitle.innerText = quizzes[quizIdx].quiz;
+
+  answerList.innerHTML = "";
+  quizzes[quizIdx].answers.forEach((item) => {
+    const span = document.createElement('span');
+    span.innerText = item;
+
+    answerList.appendChild(span);
+  })
+
+  button.style.display = "none";
+});
