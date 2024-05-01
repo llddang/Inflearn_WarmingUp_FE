@@ -16,23 +16,11 @@ const answerList = document.querySelector('.answerList');
 
 const button = document.querySelector('button');
 
-window.onload = function() {
-  quizIdx = Math.floor(Math.random() * quizzes.length);
-  
-  quizTitle.innerText = quizzes[quizIdx].quiz;
-
-  answerList.innerHTML = "";
-  quizzes[quizIdx].answers.forEach((item) => {
-    const span = document.createElement('span');
-    span.innerText = item;
-
-    answerList.appendChild(span);
-  })
-}
+window.onload = createQuiz;
 
 answerList.addEventListener('click', e => {
   if( e.target.tagName === "DIV") return;
-  if( clickFlag === -1) return;
+  if( clickFlag === 0) return;
   clickFlag = clickFlag - 1;
 
   e.target.parentNode.childNodes.forEach(span => {
@@ -50,7 +38,9 @@ answerList.addEventListener('click', e => {
   button.style.display = 'block';
 })
 
-button.addEventListener('click', () => {
+button.addEventListener('click', createQuiz);
+
+function createQuiz() {
   let tmp;
   do {
     tmp = Math.floor(Math.random() * quizzes.length);
@@ -71,4 +61,4 @@ button.addEventListener('click', () => {
   })
 
   button.style.display = "none";
-});
+}
