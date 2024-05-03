@@ -1,0 +1,57 @@
+body {
+  margin: 50px;
+  font-size: 20px;
+  input, button {
+    width: 100%;
+    margin-bottom: 36px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 4px;
+  }
+}
+label {
+  font-weight: 600;
+  margin: 0;
+}
+input {
+  font-size: 16px;
+  padding: 8px 0px;
+}
+button {
+  height: 30px;
+  font-size: 12px;
+  background-color: white;
+  &:hover {
+    background-color: gray;
+    color: white;
+  }
+}
+table{
+  width: 100%;
+  text-align: left;
+  th {
+    padding-left: 4px;
+    border-bottom: 1px solid rgb(210, 210, 210);
+  }
+  td {
+    border-bottom: 1px solid rgb(210, 210, 210);
+    padding: 12px;
+    font-size: 16px;
+    width: 40%;
+    &:last-child:hover {
+      width: 20%;
+      cursor: pointer;
+      color: aqua;
+    }
+  }
+}
+.toast {
+  background-color: green;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  padding: 8px;
+}
+#toastList {
+  margin-bottom: 20px;
+}
