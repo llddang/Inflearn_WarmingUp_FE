@@ -1,0 +1,125 @@
+
+body {
+  margin: 0;
+}
+header {
+  font-size: 24px;
+  padding: 12px;
+  background-color: rgb(81, 81, 254);
+  color: white;
+}
+main {
+  padding: 20px;
+  > * {
+    margin-bottom: 20px;
+  }
+}
+h1 {
+  margin: 0;
+}
+.SearchUI {
+  padding: 20px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  .SearchUITitle {margin-bottom: 0px;}
+  .SearchUIDescription {
+    margin: 0;
+    color: gray;
+  }
+  input{
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 20px 0px 0px;
+    font-size: 20px;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+  }
+}
+.ProfileResult {
+  padding: 20px;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  img {
+    width: 250px;
+    height: 250px;
+  }
+  button {
+    background-color: rgb(81, 81, 254);
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+ul{
+  font-size: 14px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+}
+.buttonList {
+  color: white;
+  li {
+    float: left;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0px 10px 0px 0px;
+  }
+  :nth-child(1) { 
+    background-color: rgb(104, 104, 255);
+  }
+  :nth-child(2) { 
+    background-color: rgb(149, 149, 149);
+  }
+  :nth-child(3) { 
+    background-color: rgb(60, 154, 60);
+  }
+  :nth-child(4) {
+    background-color: rgb(60, 177, 181);
+  }
+}
+.tableList {
+  display: block;
+  width: 100%;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 5px;
+  li {
+    width: calc(100% - 40px);
+    padding: 10px 20px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+  }
+  :last-child {
+    border-bottom: none;
+  }
+}
+.repoLists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.repo {
+  width: calc(100% - 40px);
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    flex: 1 0 auto;
+    color: skyblue;
+    text-decoration-line: none;
+  }
+}
+.alertToast {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(221, 82, 82);
+  color: white;
+  border-radius: 5px;
+}
