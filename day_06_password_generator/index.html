@@ -8,46 +8,47 @@
   <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <body>
-    <h1>비밀번호 생성하기!</h1>
-    <div class="passwordDiv">
-      <span class="passwordResult">클릭해서 비밀번호를 복사합니다.</span>
-      <button style="background-color: transparent; border: 0; padding: 5px 10px; border-left: 1px solid black;">
-        <i class="far fa-clipboard" style="width: 20px; height: 20px;"></i>
-      </button>
+  <h1>비밀번호 생성하기!</h1>
+  <div class="passwordDiv">
+    <span class="passwordResult">클릭해서 비밀번호를 복사합니다.</span>
+    <button id="copyBtn" style="background-color: transparent; border: 0; padding: 5px 10px; border-left: 1px solid black; position: relative;">
+      <i class="far fa-clipboard" style="width: 20px; height: 20px;"></i>
+    </button>
+  </div>
+  <hr style="width: 100%; border: 0; border-bottom: 0.5px solid #D5D5D5;"/>
+  <form action="javascript:submit();">
+    <div class="inputDiv">
+      <span>Length</span>
+      <input type="number" min="5" max="70" id="passwordLength" />
+      <label for="passwordLength"></label>
     </div>
-    <hr style="width: 100%; border: 0; border-bottom: 0.5px solid #D5D5D5;"/>
-    <form>
-      <div class="inputDiv">
-        <span>Length</span>
-        <input type="number" min="5" max="70" id="passwordLength" />
-        <label for="passwordLength"></label>
-      </div>
-      <span>포함할 문자:</span>
-      <div>
-        <input type="checkbox" id="numbers" />
-        <label for="numbers">Numbers (0-9)</label>
-      </div>
-      <div>
-        <input type="checkbox" id="small" />
-        <label for="small">Small Letters (a-z)</label>
-      </div>
-      <div>
-        <input type="checkbox" id="capital" />
-        <label for="capital">Capital Letters (A-Z)</label>
-      </div>
-      <div>
-        <input type="checkbox" id="symbols" />
-        <label for="symbols">Symbols (@,!,#,$,&,%)</label>
-      </div>
-      <button>생성하기</button>
-    </form>
-    <div class="guideDiv">
-      <i class="fas fa-circle-info"></i>
-      <ul>
-        <li>최소 길이는 5입니다.</li>
-        <li>최대 길이는 70입니다.</li>
-        <li>강력한 비밀번호는 10~16자여야 합니다.</li>
-      </ul>
+    <span>포함할 문자:</span>
+    <div>
+      <input type="checkbox" id="numbers" />
+      <label for="numbers">Numbers (0-9)</label>
     </div>
+    <div>
+      <input type="checkbox" id="small" />
+      <label for="small">Small Letters (a-z)</label>
+    </div>
+    <div>
+      <input type="checkbox" id="capital" />
+      <label for="capital">Capital Letters (A-Z)</label>
+    </div>
+    <div>
+      <input type="checkbox" id="symbols" />
+      <label for="symbols">Symbols (@,!,#,$,&,%)</label>
+    </div>
+    <button>생성하기</button>
+  </form>
+  <div class="guideDiv">
+    <i class="fas fa-circle-info"></i>
+    <ul>
+      <li>최소 길이는 5입니다.</li>
+      <li>최대 길이는 70입니다.</li>
+      <li>강력한 비밀번호는 10~16자여야 합니다.</li>
+    </ul>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

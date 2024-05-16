@@ -62,3 +62,13 @@ form {
     margin: 0;
   }
 }
+.alertCopy {
+  width: 100px; 
+  padding: 10px;
+  position: absolute; 
+  left: -40px; 
+  top: -40px; 
+  background-color: black; 
+  color: white; 
+  border-radius: 5px; 
+}
