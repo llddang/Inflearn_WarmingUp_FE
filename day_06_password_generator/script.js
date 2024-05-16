@@ -12,6 +12,8 @@ let capitalChecked = false;
 let symbolChecked = false;
 
 copyBtn.addEventListener('click', () => {
+  if (passwordResult.textContent === "클릭해서 비밀번호를 복사합니다.") return;
+
   navigator.clipboard.writeText(passwordResult.textContent);
 
   const alertCopy = document.createElement('div');
@@ -21,7 +23,6 @@ copyBtn.addEventListener('click', () => {
   copyBtn.appendChild(alertCopy);
 
   setTimeout(() => alertCopy.remove(), 1000);
-
 });
 
 const submit = () => {
