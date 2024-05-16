@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed Test</title>
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>타자 속도 측정</h1>
+  <section class="typeStats">
+    <div class="typeStat">
+      <span>오타</span>
+      <p id="errorStat">0</p>
+    </div>
+    <div class="typeStat">
+      <span>시간</span>
+      <p id="timeStat">20s</p>
+    </div>
+    <div class="typeStat">
+      <span>정확도 (%)</span>
+      <p id="accuracyStat">100</p>
+    </div>
+  </section>
+  <section class="textDisplay">
+  </section>
+  <textarea class="typingBoard" placeholder="여기에 타이핑 하세요."></textarea>
+  <button>다시하기</button>
+  <script src="script.js"></script>
+</body>
+</html>
